@@ -1,14 +1,32 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/Authprovider";
 
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {})
+            .catch(error => console.log(error))
+    }
+    
     //----- menu link start
     const navItems = <>
         <li><Link>Home</Link></li>
         <li><Link>About</Link></li>
         <li><Link>Blog</Link></li>
         <li><Link>Contact</Link></li>
+        {user?.email ? <>
+            <li><Link to="bookings">My Bookings</Link></li>
+            <li><button onClick={handleLogOut}>LogOut</button></li>
+        </> :
+            <li><Link to="login">LogIn</Link></li>
+        }
     </>
+    //----- menu link end
     //----- menu link end
     return (
         <div>
@@ -43,8 +61,27 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                <button className="btn btn-outline btn-error">Appoinment</button>
-                </div>
+        {
+          user ? <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-24 rounded-full">
+                <img src={user?.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+              </div>
+            </label>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <button className="btn btn-sm btn-ghost">{user?.displayName || "user name not found"}</button>
+              </li>
+              <li>
+                <button onClick={logOut}
+                  className="btn btn-warning text-white">logout</button>
+              </li>
+            </ul>
+          </div>
+            :
+            <Link to={'/login'}><button className="btn btn-warning text-white">LogIn</button></Link>
+        };
+      </div>
             </div>
         </div>
     );
