@@ -1,27 +1,12 @@
-import Swal from "sweetalert2";
 
-const BookingRow = ({ booking }) => {
+const BookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
     const { _id, price, img, service, date } = booking;
-    
-    const handleDelete = id => {
-        const procced = Swal.fire({
-            title: 'success!',
-            text: 'Are you sure you want delete',
-            icon: 'success',
-            confirmButtonText: 'Cool'
-          })
-          if(procced){
-            fetch(``)
-            .then(res => res.json())
-            .then(data => console.log(data))
-          }
-    }
-
+  
     return (
         <tr>
             <th>
                 <label>
-                    <button onClick={(), => handleDelete(_id)} className="btn btn-sm btn-circle btn-outline">
+                    <button onClick={() => handleDelete(_id)} className="btn btn-sm btn-circle btn-outline">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6"
@@ -53,7 +38,7 @@ const BookingRow = ({ booking }) => {
             <td>{date}</td>
             <td>${price}</td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button onClick={() => handleBookingConfirm(_id)} className="btn btn-ghost btn-xs">confirm</button>
             </th>
         </tr>
     );
