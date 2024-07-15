@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "name": "Cheeseburger",
     "title": "Classic Cheeseburger",
     "description": "A juicy beef patty with melted cheese, lettuce, tomato, and special sauce on a sesame seed bun.",
@@ -11,7 +10,6 @@
     "img": "https://www.shutterstock.com/image-photo/burger-tomateoes-lettuce-pickles-on-600nw-2309539129.jpg"
   },
   {
-    "id": 2,
     "name": "Chicken Nuggets",
     "title": "Crispy Chicken Nuggets",
     "description": "Crispy, golden-brown chicken nuggets served with your choice of dipping sauce.",
@@ -22,7 +20,6 @@
     "img": "https://www.yummytummyaarthi.com/wp-content/uploads/2023/08/kfc-chicken-1-500x500.jpeg"
   },
   {
-    "id": 3,
     "name": "French Fries",
     "title": "Golden French Fries",
     "description": "Hot and crispy golden fries, lightly salted.",
@@ -33,7 +30,6 @@
     "img": "https://www.foodandwine.com/thmb/zdxkG0yC5mkpmA_7G9Sry_Dwcxk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Roasted-Carrot-with-Preserved-Lemons-and-Dates-FT-RECIPE1022-2000-f1288d6139f945fcb0b437316f813e72.jpg"
   },
   {
-    "id": 4,
     "name": "Veggie Wrap",
     "title": "Fresh Veggie Wrap",
     "description": "A fresh tortilla wrap filled with a mix of grilled vegetables, hummus, and a zesty dressing.",
@@ -44,7 +40,6 @@
     "img": "https://hips.hearstapps.com/hmg-prod/images/del099923-tuscan-chicken-wraps-web-0921-eb-hi-res-index-6529d12dd21fe.jpg?crop=0.8883780332056195xw:1xh;center,top&resize=1200:*"
   },
   {
-    "id": 5,
     "name": "Pepperoni Pizza",
     "title": "Classic Pepperoni Pizza",
     "description": "A classic pizza topped with pepperoni, mozzarella cheese, and marinara sauce.",
@@ -55,7 +50,6 @@
     "img": "https://www.southernliving.com/thmb/3x3cJaiOvQ8-3YxtMQX0vvh1hQw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2652401_QFSSL_SupremePizza_00072-d910a935ba7d448e8c7545a963ed7101.jpg"
   },
   {
-    "id": 6,
     "name": "Chocolate Milkshake",
     "title": "Rich Chocolate Milkshake",
     "description": "A rich and creamy chocolate milkshake topped with whipped cream and a cherry.",
